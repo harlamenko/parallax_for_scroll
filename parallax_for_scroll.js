@@ -1,11 +1,6 @@
-// у родительского элемента должно быть относительное позиционирования,
-// а у дочерних элементов - абсолютное.
-// глубина расположения элемента задается свойством data-depth от 1 до 9
 ;(function(){
-    if (!HTMLElement.prototype.__proto__.parralax) {
-
-        // функция принимает список элементов, которые будут двигаться
-        HTMLElement.prototype.__proto__.parallax = function parallax(elems) {
+    if (!HTMLElement.prototype.parralax) {
+        HTMLElement.prototype.parallax = function parallax(elems) {
             const self = this;
             let containerRect = self.getBoundingClientRect();
 
